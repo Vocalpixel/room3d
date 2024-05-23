@@ -1,0 +1,356 @@
+* {
+  transform-style: preserve-3d;
+}
+
+
+.sec2 {
+  height: 90vh;
+  width: 100%;
+  background-color: #202020;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliders{
+  background-color: #369310;
+}
+
+.contRoom {
+  background-color: darkolivegreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.room {
+  position: relative;
+  width: 25vw;
+  height: 25vw;
+  transform: perspective(90vw) rotateX(75deg) rotateZ(45deg) translateZ(-7vw) translateX(0vw) scale3d(.9, .9, .9);
+  transition: .5s ease-out;
+}
+
+.pi_r {
+  background-image: linear-gradient(to left, #391419, #5E2129, #5E2129, #5E2129, #5E2129, #5E2129, #5E2129, #5E2129, #391419);
+  width: 25vw;
+  height: 20vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateX(-25vw) translateY(-20vw);
+}
+
+.pi_f {
+  background: #303030;
+  width: 2vw;
+  height: 20vw;
+  transform: rotateX(-90deg) translateX(-2vw) translateZ(25vw) translateY(-20vw);
+}
+
+.pi_t {
+  background: #ABABAB repeat;
+  width: 25vw;
+  height: 2vw;
+  transform: rotateZ(-90deg) translateX(-25vw) translateY(-2vw) translateZ(20vw);
+}
+
+.pd_f {
+  background-image: linear-gradient(to left, #391419, #5E2129, #5E2129, #5E2129, #5E2129, #5E2129, #5E2129, #5E2129, #391419);
+  width: 25vw;
+  height: 20vw;
+  transform: rotateX(-90deg) translateY(-20vw);
+}
+
+.pd_f::after,
+.pi_r::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 25%, rgba(255, 50, 50, 0.2));
+}
+
+.pd_r {
+  background: #303030;
+  width: 2vw;
+  height: 20vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateY(-20vw) translateZ(25vw);
+}
+
+.pd_t {
+  background: #ABABAB repeat;
+  width: 27vw;
+  height: 2vw;
+  transform: translateY(-2vw) translateZ(20vw) translateX(-2vw);
+}
+
+.pw_t {
+  width: 25vw;
+  height: 25vw;
+  transform: rotateZ(-90deg) translateX(-25vw);
+  background-image: url(/assets/img/textures/floor.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.pw_t::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 40%);
+}
+
+.pw_f {
+  background: #505050;
+  width: 27vw;
+  height: 2vw;
+  transform: rotateX(-90deg) translateX(-2vw) translateZ(25vw);
+}
+
+.pw_r {
+  background: #505050;
+  width: 27vw;
+  height: 2vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateX(-25vw) translateZ(25vw);
+}
+
+.face {
+  position: absolute;
+  transform-origin: top left;
+}
+
+.p_f {
+  background-image: radial-gradient(#404040 60%, #303030);
+  width: 7vw;
+  height: 15vw;
+  transform: rotateX(-90deg) translateY(-15vw) translateX(3.025vw) translateZ(0.25vw);
+}
+
+.p_f::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 60%);
+}
+
+.p_r {
+  background-image: linear-gradient(to left, #202020, #303030);
+  width: 0.5vw;
+  height: 15vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateY(-15vw) translateZ(10vw) translateX(-0.25vw);
+}
+
+.p_t {
+  background-image: linear-gradient(to top, #303030, #202020);
+  background-repeat: repeat;
+  width: 7vw;
+  height: 0.5vw;
+  transform: translateY(-2.25vw) translateZ(15vw) translateX(3vw) translateY(2vw);
+}
+
+.mp_r1 {
+  background-image: linear-gradient(to left, #202020, #303030);
+  width: 0.5vw;
+  height: 15.55vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateY(-15.55vw) translateZ(10.55vw) translateX(-0.5vw);
+}
+
+.mp_f1 {
+  background-image: linear-gradient(to top, #202020, #303030);
+  width: 0.5vw;
+  height: 15.05vw;
+  transform: rotateX(-90deg) translateY(-15.05vw) translateX(10.05vw) translateZ(0.5vw);
+}
+
+.mp_f2 {
+  background-image: linear-gradient(to top, #303030, #303030);
+  width: 8.1vw;
+  height: 0.5vw;
+  transform: rotateX(-90deg) translateY(-15.55vw) translateX(2.45vw) translateZ(0.5vw);
+}
+
+.mp_t {
+  background-image: linear-gradient(to top, #303030, #202020);
+  background-repeat: repeat;
+  width: 8.1vw;
+  height: 0.5vw;
+  transform: translateY(-2vw) translateZ(15.55vw) translateX(2.45vw) translateY(2vw);
+}
+
+.mp_f3 {
+  background-image: linear-gradient(to top, #202020, #303030);
+  width: 0.5vw;
+  height: 15.05vw;
+  transform: rotateX(-90deg) translateY(-15.05vw) translateX(2.45vw) translateZ(0.5vw);
+}
+
+.mp_r2 {
+  background-image: linear-gradient(to left, #202020, #303030);
+  width: 0.5vw;
+  height: 15.05vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateY(-15.05vw) translateZ(2.95vw) translateX(-0.5vw);
+}
+
+.desk_r {
+  background-image: linear-gradient(to top, #202020, #303030);
+  width: 15vw;
+  height: 1vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateY(-5vw) translateZ(5vw) translateX(-20vw);
+}
+
+.desk_f {
+  background-image: linear-gradient(to top, #202020, #303030);
+  width: 5vw;
+  height: 1vw;
+  transform: rotateX(-90deg) translateY(-5vw) translateZ(20vw) translateX(0vw);
+}
+
+.desk_t {
+  background-image: linear-gradient(to left, #757575 60%, #303030);
+  width: 5vw;
+  height: 15vw;
+  transform: translateY(5vw) translateZ(5vw) translateX(0vw);
+}
+
+.desk_sh {
+  background-image: linear-gradient(to bottom, rgba(57, 20, 25, 1), transparent 100%);
+  filter: blur(2.5px);
+  width: 15vw;
+  height: 4vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateY(-4vw) translateZ(0vw) translateX(-20vw);
+}
+
+
+.tv_li {
+  background-image: url(/assets/img/textures/windows.jpg) ;
+  filter: blur(20px) brightness(200%);
+  width: 16vw;
+  height: 9vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateX(-20.5vw) translateZ(.4vw) translateY(-17vw);
+}
+
+
+.tv_r {
+  background-image: url(/assets/img/textures/windows.jpg);
+  width: 16vw;
+  height: 9vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateY(-17vw) translateZ(.5vw) translateX(-20.5vw);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.tv_b1 {
+  background: #FC6E51;
+  width: 8vw;
+  height: 2.5vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateY(-13.5vw) translateZ(.5vw) translateX(-16.5vw);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  animation: colorChange 1s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+.tv_b1:hover {
+  background: #c75a43;
+}
+
+.tv_f {
+  background-image: linear-gradient(to right, #202020, #303030);
+  width: .5vw;
+  height: 9vw;
+  transform: rotateX(-90deg) translateY(-17vw) translateZ(20.5vw) translateX(0vw);
+}
+
+.tv_t {
+  background-image: linear-gradient(to left, #303030 60%, #202020);
+  width: .5vw;
+  height: 16vw;
+  transform: translateY(4.5vw) translateZ(17vw) translateX(0vw);
+}
+
+.tv_sh {
+  background-image: linear-gradient(to bottom, rgba(57, 20, 25, 1), transparent 40%);
+  filter: blur(2.5px);
+  width: 16vw;
+  height: 4vw;
+  transform: rotateX(-90deg) rotateY(90deg) translateY(-8vw) translateZ(0vw) translateX(-20.5vw);
+}
+
+.soon-child {
+  display: none;
+  width: 25vw;
+  height: 25vw;
+  transform: rotateX(-90deg) rotateY(0deg) translateX(0vw);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation: rotateYAnimation 20s infinite linear reverse;
+}
+
+.soon-child h1 {
+  text-align: center;
+  background-color: #242424;
+  border-width: 1px;
+  animation: rainbow 2.5s infinite linear;
+}
+
+.linea-roja {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 2px; /* Grosor de la línea */
+  height: 100%; /* Altura completa de la pantalla */
+  background-color: red;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Asegúrate de que esté por encima de todos los demás elementos */
+}
+
+
+.linea-roja2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px; /* Puedes ajustar la altura según lo desees */
+  background-color: red;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Asegúrate de que esté por encima de todos los demás elementos */
+}
+
+/*.xample{*/
+/*  background-color: #FC6E51;*/
+/*  width: 100px;*/
+/*  height: 100px;*/
+/*  border-left: 2px solid white;*/
+/*  border-bottom: 2px solid blue;*/
+/*  transform: rotateX(90deg) translateY(50px);*/
+/*}*/
+.contented {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
